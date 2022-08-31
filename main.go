@@ -3,6 +3,7 @@ package main
 import (
 	"belajar-golang-REST/app"
 	"belajar-golang-REST/controller"
+	"belajar-golang-REST/exception"
 	"belajar-golang-REST/helper"
 	"belajar-golang-REST/repository"
 	"belajar-golang-REST/service"
@@ -26,6 +27,8 @@ func main() {
 	router.POST("/api/categories", categoryController.Create)
 	router.PUT("/api/categories/:categoryId", categoryController.Update)
 	router.DELETE("/api/categories/:categoryId", categoryController.Delete)
+
+	router.PanicHandler = exception.ErrorHandler
 
 	server := http.Server{
 		Addr:    "localhost:3000",
