@@ -7,7 +7,7 @@ import (
 )
 
 func NewDB() *sql.DB {
-	connStr := "user=postgres password=123456 dbname=postgres sslmode=disable"
+	connStr := "user=postgres password=123456 dbname=databaseTest sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	helper.PanicIfError(err)
 

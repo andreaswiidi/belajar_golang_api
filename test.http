@@ -1,18 +1,20 @@
 ### Get All Categories
 GET http://localhost:3000/api/categories
+X-API-Key: RAHASIA
 Accept: application/json
 
 ### Create New Category
 POST http://localhost:3000/api/categories
+X-API-Key: RAHASIA
 Accept: application/json
 Content-Type: application/json
 
 {
-  "name": ""
+  "name": "Aweawe"
 }
 
 ### Get Category by ID
-GET  http://localhost:3000/api/categories/1
+GET  http://localhost:3000/api/categories/100
 Content-Type: application/json
 
 ### Update Category ID
